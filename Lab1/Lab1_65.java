@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _65 {
+public class Lab1_65 {
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("Enter the size of array: ");
