@@ -1,2 +1,2 @@
 Câu hỏi: Nếu bạn tạo một constructor method để xây dựng 1 đĩa DVD theo tiêu đề sau đó tạo một constructor method để xây dựng 1 đĩa DVD theo danh mục. Java có cho phép bạn làm điều này không?
-Trả lời: Không, vì 2 constructor methods này không có sự khác biệt về kiểu dữ liệu hay số lượng tham số.
+Trả lời: Không, vì 2 constructor methods này không có sự khác biệt về kiểu dữ liệu hay số lượng tham số nên không thể thực hiện method overloading.
