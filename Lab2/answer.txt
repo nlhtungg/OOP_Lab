@@ -1,2 +1,2 @@
 Câu hỏi: Nếu bạn tạo một constructor method để xây dựng 1 đĩa DVD theo tiêu đề sau đó tạo một constructor method để xây dựng 1 đĩa DVD theo danh mục. Java có cho phép bạn làm điều này không?
-Trả lời: Có, Java cho phép tạo nhiều constructor trong 1 lớp thông qua khái niệm constructor overloading. Đây là việc có nhiều phương thức khởi tạo trong một lớp với danh sách các tham số khác nhau. Mỗi constructor có thể khởi tạo một đối tượng với các bộ giá trị khởi tạo khác nhau dựa trên các tham số mà nó nhận.
+Trả lời: Không, vì 2 constructor methods này không có sự khác biệt về kiểu dữ liệu hay số lượng tham số.
