@@ -50,4 +50,31 @@ public class Cart {
 		}
         return result;
     }
+
+    public void searchById(int id) {
+        id++;
+        if(id<=0 || id>qtyOrdered){
+            System.out.println("No disc found!");
+        } else {
+            System.out.println("Disc found: " + itemsOrdered[id].getTitle() 
+            + " - " + itemsOrdered[id].getCategory() 
+            + " - " + itemsOrdered[id].getDirector() 
+            + " - " + itemsOrdered[id].getLength() 
+            + " - " + itemsOrdered[id].getCost());
+        }
+    }
+
+    public void searchByTitle(String title) {
+        for(int i = 0; i < qtyOrdered; i++) {
+            if(itemsOrdered[i].getTitle().equals(title)) {
+                System.out.println("Disc found: " + itemsOrdered[i].getTitle() 
+                + " - " + itemsOrdered[i].getCategory() 
+                + " - " + itemsOrdered[i].getDirector() 
+                + " - " + itemsOrdered[i].getLength() 
+                + " - " + itemsOrdered[i].getCost());
+                return;
+            }
+        }
+        System.out.println("No disc found!");
+    }
 }
