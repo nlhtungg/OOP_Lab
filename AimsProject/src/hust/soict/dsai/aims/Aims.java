@@ -1,4 +1,4 @@
-package AIMS;
+package hust.soict.dsai.aims;
 
 public class Aims {
     public static void main (String [] args) {
@@ -20,10 +20,11 @@ public class Aims {
 		anOrder.removeDigitalVideoDisc(dvd2);
 		anOrder.addDigitalVideoDisc(dvd2);
 		anOrder.removeDigitalVideoDisc(dvd3);
-		anOrder.removeDigitalVideoDisc(dvd1);
-		anOrder.removeDigitalVideoDisc(dvd2);
 		
 		// Print total cost of the items in the cart
 		System.out.println("Total Cost is: " + anOrder.totalCost());
+
+		// Display the cart
+		anOrder.displayCart();
     }
 }
