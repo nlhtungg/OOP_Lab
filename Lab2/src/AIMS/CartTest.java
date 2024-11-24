@@ -12,5 +12,16 @@ public class CartTest {
 
         //Test print method
         cart.displayCart();
+
+        //Test search methods
+        cart.searchById(0);
+        cart.searchById(1);
+        cart.searchById(2);
+        cart.searchById(3);
+        cart.searchByTitle(null);
+        cart.searchByTitle("The Lion King");
+        cart.searchByTitle("Star Wars");
+        cart.searchByTitle("Aladin");
+        cart.searchByTitle("The Lion King 2");
     }
 }
