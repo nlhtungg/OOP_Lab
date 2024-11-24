@@ -1,4 +1,7 @@
-package AIMS;
+package hust.soict.dsai.test;
+
+import hust.soict.dsai.aims.DigitalVideoDisc;
+import hust.soict.dsai.aims.Store;
 
 public class StoreTest {
     public static void main(String[] args) {

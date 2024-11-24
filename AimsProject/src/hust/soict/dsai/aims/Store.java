@@ -1,4 +1,4 @@
-package AIMS;
+package hust.soict.dsai.aims;
 
 import java.util.ArrayList;
 

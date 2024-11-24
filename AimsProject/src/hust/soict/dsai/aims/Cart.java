@@ -1,4 +1,4 @@
-package AIMS;
+package hust.soict.dsai.aims;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -83,7 +83,7 @@ public class Cart {
 
     public void searchById(int id) {
         id++;
-        if(id<=0 || id>qtyOrdered){
+        if(id<=0 || id>qtyOrdered || itemsOrdered[id] == null) {
             System.out.println("No disc found!");
         } else {
             System.out.println("Disc found: " + itemsOrdered[id].getTitle() 

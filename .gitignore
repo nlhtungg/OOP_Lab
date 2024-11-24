@@ -1,3 +1,4 @@
-/Lab1/*.class
-
+*.class
 *.docx
+*.bak
+*.pdf
