@@ -1,3 +1,4 @@
+package Lab1;
 import java.util.Scanner;
 public class Lab1_62 {
     public static void main(String args[]) {
