@@ -19,7 +19,6 @@ public class Cart {
     }
 
 
-
     public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         if(qtyOrdered == MAX_NUMBERS_ORDERED) {
             System.out.println("The cart is almost full!");
