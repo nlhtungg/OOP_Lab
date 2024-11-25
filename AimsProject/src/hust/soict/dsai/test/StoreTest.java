@@ -1,7 +1,7 @@
 package hust.soict.dsai.test;
 
-import hust.soict.dsai.aims.DigitalVideoDisc;
-import hust.soict.dsai.aims.Store;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
     public static void main(String[] args) {
@@ -12,5 +12,8 @@ public class StoreTest {
         store.addDVD(dvd1);
         store.addDVD(dvd2);
         store.addDVD(dvd3);
+        store.removeDVD(dvd2);
+        store.removeDVD(dvd1);
+        store.removeDVD(dvd3);
     }
 }
