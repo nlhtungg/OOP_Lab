@@ -1,3 +1,4 @@
+package Lab1;
 public class Lab1_221 {
     public static void main(String[] args) {
         System.out.println("Xin chao \n cac ban!");
