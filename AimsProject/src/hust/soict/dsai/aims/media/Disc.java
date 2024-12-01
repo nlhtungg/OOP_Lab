@@ -2,26 +2,16 @@ package hust.soict.dsai.aims.media;
 
 public class Disc extends Media {
     private String director;
-    private int length;
+    private float length;
 
-    public Disc() {
-        // TODO Auto-generated constructor stub
+    public Disc(int id, String title, String category, float cost, String director, float length) {
+        super(id, title, category, cost);
+        this.director = director;
+        this.length = length;
     }
-    public Disc(String director, String category, String title, float cost){
-        super(category,title,cost);
-        this.setDirector(director);
-    }
-    public Disc(String title, String category, String director, int length, float cost){
-        this(director,category,title,cost);
-        this.setLength(length);
-    }
-    public Disc(String director, int length) {
-        super();
-        this.setDirector(director);
-        this.setLength(length);
-    }
-    public Disc(String title) {
-        super(title);
+
+    public Disc(int id, String title, String category, float cost) {
+        super(id, title, category, cost);
     }
 
     public String getDirector() {
@@ -32,12 +22,16 @@ public class Disc extends Media {
         this.director = director;
     }
 
-    public int getLength() {
+    public float getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(float length) {
         this.length = length;
     }
 
+    @Override
+    public String toString() {
+        return "Disc - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getCost() + " - " + this.getDirector() + " - " + this.getLength();
+    }
 }

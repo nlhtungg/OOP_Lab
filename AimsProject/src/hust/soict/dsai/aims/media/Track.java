@@ -1,17 +1,20 @@
 package hust.soict.dsai.aims.media;
 
-import hust.soict.dsai.aims.media.Playable;
-
-public class Track implements Playable{
-
+public class Track {
     private String title;
-    private int length;
-    public Track() {
-        // TODO Auto-generated constructor stub
+    private float length;
+
+    public float getLength() {
+        return length;
     }
-    public Track(String title, int length) {
-        this.setLength(length);
-        this.setTitle(title);
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Track(String title, float length) {
+        this.title = title;
+        this.length = length;
     }
 
     public void play() {
@@ -19,24 +22,10 @@ public class Track implements Playable{
         System.out.println("Track length: " + this.getLength());
     }
 
-    public String getTitle() {
-        return title;
-    }
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    public int getLength() {
-        return length;
-    }
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-
+        if(this == obj) return true;
+        if(obj == null || getClass() != obj.getClass()) return false;
         Track track = (Track) obj;
         return title.equals(track.title) && length == track.length;
     }
