@@ -1,4 +1,4 @@
-Question 1: Which classes are aggregates of other classes? Checking all constructors 	of whole classes if they initialize for their parts?
+Question 1: Which classes are aggregates of other classes? Checking all constructors of whole classes if they initialize for their parts?
 - Write constructors for parent and child classes. Remove redundant setter methods if any
 
 Lớp Book và CompactDisc là tập hợp của các lớp khác vì chúng chứa danh sách authors (trong Book) và tracks (trong CompactDisc).
