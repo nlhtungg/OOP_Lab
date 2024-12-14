@@ -13,18 +13,15 @@ import java.util.ArrayList;
 public class Polymorphism {
 
     public static void main(String[] args) {
-        List<Media> mediae = new ArrayList<Media>();
-        ArrayList<Track> tracks = new ArrayList<Track>();
-        tracks.add(new Track("Track 1", 1.0f));
-        tracks.add(new Track("Track 2", 2.0f));
-        CompactDisc cd = new CompactDisc(1, "Nhac bat hu", "Music", 10.0f, "Artist", tracks);
-        DigitalVideoDisc dvd = new DigitalVideoDisc(2, "DVD", "Movie", 20.0f, "Director", 120);
-        Book book = new Book(3, "Book", "Book", 5.0f, List.of("Author 1", "Author 2"));
-        mediae.add(cd);
-        mediae.add(dvd);
-        mediae.add(book);
+        List<Media> media = new ArrayList<Media>();
+        CompactDisc cd = new CompactDisc("DVD book","John","Williams",6.00f);
+        DigitalVideoDisc dvd = new DigitalVideoDisc("Casas","Rap","Traevis",7,8.52f);
+        Book book = new Book("Life of Pi","Adventure",5.32f);
+        media.add(cd);
+        media.add(dvd);
+        media.add(book);
 
-        for(Media m: mediae) {
+        for(Media m: media) {
             System.out.println(m.toString());
         }
     }
