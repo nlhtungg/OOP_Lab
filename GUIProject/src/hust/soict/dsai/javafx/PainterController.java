@@ -1,44 +1,40 @@
 package hust.soict.dsai.javafx;
-import javafx.event.ActionEvent;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.layout.Pane;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Circle;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.control.RadioButton;
+import javafx.scene.shape.Circle;
 
 public class PainterController {
-
     @FXML
     private Pane drawingAreaPane;
-    private String tool = "";
+    private boolean drawingMode = true;
 
     @FXML
-    void clearButtonPressed(ActionEvent e) {
-        drawingAreaPane.getChildren().clear();
+    void clearButtonPressed(ActionEvent event) {
+    	drawingAreaPane.getChildren().clear();
     }
 
     @FXML
-    void drawingAreaMouseDragged(MouseEvent e) {
-        Circle newCircle = new Circle();
-        if(tool.equals("Pen")) {
-            newCircle = new Circle(e.getX(),
-                    e.getY(), 4, Color.BLACK);
-        }
-        else if (tool.equals("Eraser")) {
-            newCircle = new Circle(e.getX(),
-                    e.getY(), 4, Color.WHITE);
-        }
-        if (e.getX()>=0 && e.getX()<=drawingAreaPane.getWidth()
-                && e.getY()>=0 && e.getY()<=drawingAreaPane.getHeight()) {
-            drawingAreaPane.getChildren().add(newCircle);
-        }
+    void drawingAreaMouseDragged(MouseEvent event) {
+    	Circle newCircle = new Circle(event.getX(), event.getY(), 4);
+    	if (drawingMode) {
+    		newCircle.setFill(Color.BLACK);
+    	} else {
+    		newCircle.setFill(Color.WHITE);
+    	}
+    	drawingAreaPane.getChildren().add(newCircle);
     }
-
+    
     @FXML
-    void toolButtonPressed(ActionEvent e) {
-        tool = ((RadioButton) e.getSource()).getText();
+    void togglePen() {
+    	drawingMode = true;
     }
-
+    
+    @FXML
+    void toggleEraser() {
+    	drawingMode = false;
+    }
 }
